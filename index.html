@@ -1,445 +1,1043 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-175HH3793W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-175HH3793W');
-</script>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Kits | Premium Football & Sports Jerseys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --primary: #ff4757;
+            --primary-hover: #e84118;
+            --dark: #2f3640;
+            --light: #f5f6fa;
+            --white: #ffffff;
+            --grey: #718093;
+            --transition: all 0.3s ease;
+            --max-width: 1200px;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            list-style: none;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
+        .container {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
 
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
 
-    
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elite Sports Hub | Premium Jerseys</title>
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.3);
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
+        section {
+            padding: 5rem 0;
+        }
 
-html{
-    scroll-behavior:smooth;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            position: relative;
+            text-transform: uppercase;
+        }
 
-body{
-    background:#f4f7fb;
-    color:#222;
-}
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
 
-/* Header */
+        /* --- HEADER & NAVIGATION --- */
+        header {
+            background-color: rgba(47, 54, 64, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
 
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    background:#111827;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    z-index:999;
-    box-shadow:0 4px 12px rgba(0,0,0,.2);
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#00d4ff;
-}
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition:.3s;
-    font-weight:bold;
-}
+        .logo span {
+            color: var(--primary);
+        }
 
-nav a:hover{
-    color:#00d4ff;
-}
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+        }
 
-/* Hero */
+        .nav-link {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:100px 20px;
-    color:white;
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
-}
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
 
-.hero h1{
-    font-size:60px;
-    margin-bottom:20px;
-}
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-}
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-.btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#00d4ff;
-    color:#111;
-    text-decoration:none;
-    border-radius:40px;
-    font-weight:bold;
-    transition:.3s;
-}
+        .nav-icons {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
 
-.btn:hover{
-    background:white;
-    transform:scale(1.05);
-}
+        .nav-icons i {
+            cursor: pointer;
+            transition: var(--transition);
+        }
 
-/* Sections */
+        .nav-icons i:hover {
+            color: var(--primary);
+        }
 
-section{
-    padding:90px 8%;
-}
+        .hamburger {
+            display: none;
+            color: var(--white);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
 
-.section-title{
-    text-align:center;
-    font-size:38px;
-    margin-bottom:45px;
-    color:#0f172a;
-}
+        /* --- HERO SECTION --- */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: left;
+            padding-top: 80px;
+        }
 
-/* About */
+        .hero-content {
+            max-width: 600px;
+        }
 
-.about{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
-    align-items:center;
-}
+        .hero-content h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
 
-.about img{
-    width:100%;
-    border-radius:15px;
-}
+        .hero-content h1 span {
+            color: var(--primary);
+        }
 
-.about p{
-    line-height:1.8;
-    font-size:18px;
-}
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-/* Products */
+        /* --- ADVANTAGES / BASICS SECTION --- */
+        .basics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
+        .basic-card {
+            background-color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
 
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    transition:.3s;
-}
+        .basic-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
 
-.card:hover{
-    transform:translateY(-10px);
-}
+        .basic-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
 
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
+        .basic-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-.card-content{
-    padding:20px;
-}
+        .basic-card p {
+            color: var(--grey);
+            font-size: 0.95rem;
+        }
 
-.card h3{
-    margin-bottom:10px;
-}
+        /* --- PRODUCTS SECTION --- */
+        #products {
+            background-color: var(--white);
+        }
 
-.price{
-    color:#0ea5e9;
-    font-size:22px;
-    font-weight:bold;
-    margin:15px 0;
-}
+        .product-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
 
-.buy{
-    width:100%;
-    border:none;
-    background:#0ea5e9;
-    color:white;
-    padding:12px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-}
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--grey);
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--dark);
+        }
 
-.buy:hover{
-    background:#0284c7;
-}
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
 
-/* Contact */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
 
-.contact{
-    background:#111827;
-    color:white;
-    border-radius:15px;
-}
+        .product-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            position: relative;
+        }
 
-form{
-    max-width:700px;
-    margin:auto;
-}
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
 
-input,textarea{
-    width:100%;
-    padding:15px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
-}
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 5px;
+            z-index: 1;
+        }
 
-textarea{
-    height:150px;
-    resize:none;
-}
+        .product-img-wrapper {
+            background-color: #eef1f6;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:#00d4ff;
-    color:#111;
-    font-weight:bold;
-    border-radius:8px;
-    cursor:pointer;
-}
+        .product-img-wrapper img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
 
-button:hover{
-    background:white;
-}
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.1) rotate(-5deg);
+        }
 
-/* Footer */
+        .product-actions {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            transition: var(--transition);
+            background: linear-gradient(transparent, rgba(0,0,0,0.4));
+        }
 
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
+        .product-card:hover .product-actions {
+            bottom: 0;
+        }
 
-/* Mobile */
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            background-color: var(--white);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            cursor: pointer;
+        }
 
-@media(max-width:768px){
+        .action-btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
 
-.hero h1{
-font-size:40px;
-}
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
 
-nav a{
-margin-left:12px;
-font-size:14px;
-}
+        .product-category {
+            font-size: 0.85rem;
+            color: var(--grey);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
 
-}
-</style>
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
 
+        .product-price {
+            font-size: 1.15rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .product-price span {
+            color: var(--grey);
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .about-content p {
+            color: var(--grey);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* --- CONTACT SECTION --- */
+        #contact {
+            background-color: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            background-color: rgba(255, 71, 87, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .contact-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: var(--grey);
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid transparent;
+            background-color: var(--white);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+            color: var(--dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            resize: none;
+            height: 150px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-about h3 span {
+            color: var(--primary);
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: var(--white);
+            padding: 0.25rem;
+        }
+
+        .newsletter-form input {
+            border: none;
+            padding: 0.5rem 1.5rem;
+            width: 100%;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar { padding: 1.2rem 0; }
+            .nav-menu {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark);
+                flex-direction: column;
+                text-align: center;
+                padding: 3rem 0;
+                transition: 0.5s ease;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active { top: 75px; }
+            .hamburger { display: block; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .about-wrapper, .contact-wrapper, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .about-img { order: -1; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .contact-form { padding: 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">Elite Sports Hub</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero" id="home">
-
-<div>
-
-<h1>Premium Sports Jerseys</h1>
-
-<p>Football • Cricket • Basketball • Retro Collections</p>
-
-<a href="#products" class="btn">Shop Now</a>
-
-</div>
-
-</section>
-
-<section id="about">
-
-<h2 class="section-title">About Us</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=900&q=80">
-
-<div>
-
-<p>
-
-Welcome to <strong>Elite Sports Hub</strong>, your destination for premium-quality sports jerseys.
-We provide official-inspired football, cricket, basketball, and retro jerseys at affordable prices.
-Whether you're supporting your favorite club or national team, we have the perfect jersey for every fan.
-
-<br><br>
-
-✔ Premium Fabric<br>
-✔ Fast Delivery<br>
-✔ Affordable Prices<br>
-✔ Trusted Quality
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="products">
-
-<h2 class="section-title">Our Products</h2>
-
-<div class="products">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800&q=80">
-
-<div class="card-content">
-
-<h3>Football Jersey</h3>
-
-<p>Premium Club Edition</p>
-
-<div class="price">$29.99</div>
-
-<button class="buy">Buy Now</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80">
-
-<div class="card-content">
-
-<h3>Basketball Jersey</h3>
-
-<p>Lightweight & Comfortable</p>
-
-<div class="price">$34.99</div>
-
-<button class="buy">Buy Now</button>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80">
-
-<div class="card-content">
-
-<h3>Cricket Jersey</h3>
-
-<p>Official Inspired Kit</p>
-
-<div class="price">$24.99</div>
-
-<button class="buy">Buy Now</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="contact">
-
-<h2 class="section-title" style="color:white;">Contact Us</h2>
-
-<form id="contactForm">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<textarea placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>Elite Sports Hub</h3>
-
-<p>Premium Jerseys for Every Sports Fan</p>
-
-<p>Email: info@elitesportshub.com | Phone: +1 234 567 890</p>
-
-<p style="margin-top:10px;">© 2026 Elite Sports Hub. All Rights Reserved.</p>
-
-</footer>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
-e.preventDefault();
-alert("Thank you! Your message has been received.");
-});
-</script>
-
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="logo">APEX<span>KITS</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#basics" class="nav-link">Basics</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-bars hamburger"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Wear Your <span>Passion</span>. Live the Game.</h1>
+                <p>Get your hands on premium, authentic club and international jerseys. Engineered for maximum comfort, designed for ultimate fans.</p>
+                <a href="#products" class="btn">Shop Collection <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="basics">
+        <div class="container">
+            <h2 class="section-title">The Basics</h2>
+            <div class="basics-grid">
+                <div class="basic-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>100% Authentic</h3>
+                    <p>Every single stitch, emblem, and fabric is officially certified and premium grade merchandise.</p>
+                </div>
+                <div class="basic-card">
+                    <i class="fas fa-wind"></i>
+                    <h3>Dri-Fit Technology</h3>
+                    <p>Advanced breathable, moisture-wicking materials to keep you cool both on the pitch and in the stands.</p>
+                </div>
+                <div class="basic-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Global Shipping</h3>
+                    <p>Fast, tracked, and secured global shipping straight to your doorstep within 3-5 business days.</p>
+                </div>
+                <div class="basic-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Easy Returns</h3>
+                    <p>Not the perfect fit? Enjoy a completely hassle-free 30-day return policy for ultimate peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Jerseys</h2>
+            
+            <div class="product-filter">
+                <button class="filter-btn active" data-filter="all">All Kits</button>
+                <button class="filter-btn" data-filter="club">Club Teams</button>
+                <button class="filter-btn" data-filter="intl">International</button>
+                <button class="filter-btn" data-filter="retro">Retro Classics</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="club">
+                    <div class="product-badge">New</div>
+                    <div class="product-img-wrapper">
+                        <svg width="180" height="180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 20 L35 10 L50 20 L65 10 L80 20 L80 85 L20 85 Z" fill="#E30613"/>
+                            <path d="M35 10 L50 20 L65 10 L50 5 Z" fill="#1A1A1A"/>
+                            <rect x="32" y="30" width="6" height="55" fill="#FFFFFF"/>
+                            <rect x="47" y="30" width="6" height="55" fill="#FFFFFF"/>
+                            <rect x="62" y="30" width="6" height="55" fill="#FFFFFF"/>
+                            <path d="M20 20 L10 35 L20 45 L25 35 Z" fill="#E30613"/>
+                            <path d="M80 20 L90 35 L80 45 L75 35 Z" fill="#E30613"/>
+                        </svg>
+                    </div>
+                    <div class="product-actions">
+                        <div class="action-btn"><i class="fas fa-heart"></i></div>
+                        <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Real Madrid</p>
+                        <h3 class="product-title">Home Kit 2026/27</h3>
+                        <p class="product-price">$89.99</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="club">
+                    <div class="product-badge">Hot</div>
+                    <div class="product-img-wrapper">
+                        <svg width="180" height="180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 20 L35 10 L50 20 L65 10 L80 20 L80 85 L20 85 Z" fill="#004D98"/>
+                            <path d="M35 10 L50 20 L65 10 L50 5 Z" fill="#A50044"/>
+                            <rect x="25" y="20" width="12" height="65" fill="#A50044"/>
+                            <rect x="44" y="20" width="12" height="65" fill="#A50044"/>
+                            <rect x="63" y="20" width="12" height="65" fill="#A50044"/>
+                            <path d="M20 20 L10 35 L20 45 L25 35 Z" fill="#004D98"/>
+                            <path d="M80 20 L90 35 L80 45 L75 35 Z" fill="#004D98"/>
+                        </svg>
+                    </div>
+                    <div class="product-actions">
+                        <div class="action-btn"><i class="fas fa-heart"></i></div>
+                        <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">FC Barcelona</p>
+                        <h3 class="product-title">Away Kit 2026/27</h3>
+                        <p class="product-price">$84.99</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="intl">
+                    <div class="product-img-wrapper">
+                        <svg width="180" height="180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 20 L35 10 L50 20 L65 10 L80 20 L80 85 L20 85 Z" fill="#7B0F24"/>
+                            <path d="M35 10 L50 20 L65 10 L50 5 Z" fill="#F4BB3A"/>
+                            <circle cx="50" cy="50" r="12" fill="#F4BB3A" opacity="0.3"/>
+                            <path d="M20 20 L10 35 L20 45 L25 35 Z" fill="#7B0F24"/>
+                            <path d="M80 20 L90 35 L80 45 L75 35 Z" fill="#7B0F24"/>
+                        </svg>
+                    </div>
+                    <div class="product-actions">
+                        <div class="action-btn"><i class="fas fa-heart"></i></div>
+                        <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Portugal</p>
+                        <h3 class="product-title">National Edition</h3>
+                        <p class="product-price">$94.99</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="retro">
+                    <div class="product-badge">Sale</div>
+                    <div class="product-img-wrapper">
+                        <svg width="180" height="180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 20 L35 10 L50 20 L65 10 L80 20 L80 85 L20 85 Z" fill="#000000"/>
+                            <path d="M35 10 L50 20 L65 10 L50 5 Z" fill="#FFFFFF"/>
+                            <rect x="28" y="20" width="8" height="65" fill="#E30613"/>
+                            <rect x="46" y="20" width="8" height="65" fill="#E30613"/>
+                            <rect x="64" y="20" width="8" height="65" fill="#E30613"/>
+                            <path d="M20 20 L10 35 L20 45 L25 35 Z" fill="#000000"/>
+                            <path d="M80 20 L90 35 L80 45 L75 35 Z" fill="#000000"/>
+                        </svg>
+                    </div>
+                    <div class="product-actions">
+                        <div class="action-btn"><i class="fas fa-heart"></i></div>
+                        <div class="action-btn"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">AC Milan</p>
+                        <h3 class="product-title">1996 Retro Classic</h3>
+                        <p class="product-price">$69.99 <span>$110.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container about-wrapper">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1579952362874-460f38db3d17?auto=format&fit=crop&w=800&q=80" alt="Football Pitch Focus">
+            </div>
+            <div class="about-content">
+                <h2>We Match Your Love For The Beautiful Game.</h2>
+                <p>Founded by true sport fanatics, Apex Kits was established to bridge the gap between pure stadium passion and world-class street style. We curate premium athletic jerseys sourced directly from legendary dynamic manufacturers.</p>
+                <p>Whether you are sweating it out in a weekly 5-a-side tournament or roaring from the arena rafters, our goal remains unmatched: getting you equipped in premium style.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>15k+</h3>
+                        <p>Happy Fans</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>120+</h3>
+                        <p>Jersey Designs</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.9★</h3>
+                        <p>Top Rated Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Warehouse</h4>
+                            <p>104 Pitchside Avenue, London, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call The Squad</h4>
+                            <p>+1 (555) 342-9874</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Electronic Support</h4>
+                            <p>support@apexkits.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="shopForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Which kit or customization are you looking for?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Transmission</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>APEX<span>KITS</span></h3>
+                <p>Your premium marketplace engineered for athletic performance kits, authentic retro legends, and elite sport fashion accessories.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#basics">Basics</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Size Guides</a></li>
+                    <li><a href="#">Shipping Rates</a></li>
+                    <li><a href="#">Track Orders</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Club</h4>
+                <p>Subscribe to unwrap 15% off your initial jersey purchase!</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welcome to the Squad! Code: APEX15');">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Apex Kits Global. Crafted for True Professionals.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('fa-bars');
+            hamburger.classList.toggle('fa-times');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.add('fa-bars');
+                hamburger.classList.remove('fa-times');
+            });
+        });
+
+        // Dynamic Product Grid Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth Active Navigation Link Highlight on Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Simple Form Submission Event Handlers
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Our athletic support agents will contact you within 24 hours.');
+            document.getElementById('shopForm').reset();
+        }
+    </script>
 </body>
 </html>
