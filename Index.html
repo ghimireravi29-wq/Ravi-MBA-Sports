@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elite Sports Hub | Premium Jerseys</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:999;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00d4ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+    color:white;
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#00d4ff;
+    color:#111;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:#0f172a;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Products */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#0ea5e9;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.buy{
+    width:100%;
+    border:none;
+    background:#0ea5e9;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.buy:hover{
+    background:#0284c7;
+}
+
+/* Contact */
+
+.contact{
+    background:#111827;
+    color:white;
+    border-radius:15px;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#00d4ff;
+    color:#111;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+/* Footer */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+nav a{
+margin-left:12px;
+font-size:14px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Elite Sports Hub</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Premium Sports Jerseys</h1>
+
+<p>Football • Cricket • Basketball • Retro Collections</p>
+
+<a href="#products" class="btn">Shop Now</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<p>
+
+Welcome to <strong>Elite Sports Hub</strong>, your destination for premium-quality sports jerseys.
+We provide official-inspired football, cricket, basketball, and retro jerseys at affordable prices.
+Whether you're supporting your favorite club or national team, we have the perfect jersey for every fan.
+
+<br><br>
+
+✔ Premium Fabric<br>
+✔ Fast Delivery<br>
+✔ Affordable Prices<br>
+✔ Trusted Quality
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<h2 class="section-title">Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Football Jersey</h3>
+
+<p>Premium Club Edition</p>
+
+<div class="price">$29.99</div>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Basketball Jersey</h3>
+
+<p>Lightweight & Comfortable</p>
+
+<div class="price">$34.99</div>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80">
+
+<div class="card-content">
+
+<h3>Cricket Jersey</h3>
+
+<p>Official Inspired Kit</p>
+
+<div class="price">$24.99</div>
+
+<button class="buy">Buy Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h2 class="section-title" style="color:white;">Contact Us</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Elite Sports Hub</h3>
+
+<p>Premium Jerseys for Every Sports Fan</p>
+
+<p>Email: info@elitesportshub.com | Phone: +1 234 567 890</p>
+
+<p style="margin-top:10px;">© 2026 Elite Sports Hub. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Thank you! Your message has been received.");
+});
+</script>
+
+</body>
+</html>
